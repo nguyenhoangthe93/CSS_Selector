@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <style>
+      /* bộ chọn con cháu  */
+      .parent p {
+        color: red;
+      }
+
+      .parent .child {
+        color: blue;
+      }
+
+      .parent div .chit {
+        color: yellow;
+      }
+      /* bộ chọn con trực tiếp (con cấp 1) */
+      .parent > p {
+        background: #aaa;
+      }
+
+      .parent > .child {
+        background: green;
+      }
+
+      .parent > div .chit {
+        background: red;
+      }
+
+      /* css anh chị kế cận (chọn nhà liền kề mình chọn)  */
+      /* div + p {
+        background: red;
+      }
+
+      .con1 + .con2 {
+        background: green;
+      } */
+
+      /* anh chị em chung ~ */
+      div ~ p {
+        background: red;
+      }
+
+      .btn {
+        background: blue;
+        padding: 30px;
+      }
+
+      /* pseduo class */
+
+      /* đưa chuột vào */
+      .btn:hover {
+        background: violet;
+        color: red;
+      }
+
+      /* khi click vào */
+      .input:focus {
+        background: red;
+      }
+       /* pseduo class */
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Home page</h1>
+
+    <!-- <div class="parent">
+      <p>Child1</p>
+      <p class="child">Child2</p>
+      <p>Child3</p>
+      <p class="child">Child4</p>
+      <p>Child5</p>
+      <div>
+        <p>Child6</p>
+        <p class="child">Child7</p>
+        <p>Child8</p>
+        <div>
+          <p class="chit">Chit</p>
+        </div>
+      </div>
+    </div>
+    <p class="child">Not child</p> -->
+
+    <!-- ------------------------------------------------------------------- -->
+    <!-- css anh chị kế cận  -->
+    <!-- anh -->
+    <!-- <div>
+      <p>The 1</p>
+      <p>The 2</p>
+    </div> -->
+    <!-- anh 1 -->
+    <!-- <p>The 3</p> -->
+    <!-- anh 2 -->
+    <!-- <p>The 4</p>
+    <div class="con1">
+      <p>The 1</p>
+    </div>
+    <p class="con2">The 5</p> -->
+
+    <!-- /* css anh chị kế cận  */ -->
+    <!-- ------------------------------------------------------------------- -->
+    <!-- anh chị em chung ~ -->
+    <!-- <h1>HOme</h1>
+    <div>
+      <p>Con1</p>
+    </div>
+    <p>Con2</p>
+    <p>Con3</p>
+    <div>
+      <p>Con4</p>
+    </div>
+    <p>Con5</p> -->
+    <!--  anh chị em chung ~ -->
+    <!-- ------------------------------------------------------------------- -->
+
+    <button class="btn">Button</button>
+    <input type="text" class="input" />
+  </body>
+</html>
