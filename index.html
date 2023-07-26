@@ -47,6 +47,17 @@
       .btn {
         background: blue;
         padding: 30px;
+        /* opacity: 1; */
+
+        /* transition-delay: 0;
+        transition-duration: 3s;
+        transition-property: all;
+        transition-timing-function: ease; */
+
+        /* viết tắt */
+        transition: all 2s ease 0;
+
+        position: relative;
       }
 
       /* pseduo class */
@@ -55,14 +66,56 @@
       .btn:hover {
         background: violet;
         color: red;
+        font-size: 30px;
+        /* opacity: 0.5; */
       }
 
       /* khi click vào */
       .input:focus {
         background: red;
       }
-       /* pseduo class */
+      /* pseduo class */
 
+      /* phóng to chữ cái đàu tiên */
+      .btn::first-letter {
+        font-size: 40px;
+      }
+      /* chèn sau */
+      .btn::after {
+        content: '';
+        /* color: yellow; */
+
+        position: absolute;
+        background: green;
+        bottom: 0;
+        left: 0;
+        width: 0px;
+        height: 10px;
+        transition: all 2s ease;
+      }
+      /* chèn trước */
+      .btn::before {
+        content: 'chen truoc';
+        color: red;
+      }
+
+      /* css opacity : độ mờ đục thẻ btn 0:là ẩn , 0.5 mờ , 1: ẩn luôn */
+
+      /* Css transitions */
+      /* • transition-delay; thời gian delay
+      • transition-duration: thời gian chuyển đổi vis dụ opacity 0->1 mất 1s 
+      • transition-property: tên thuộc tinhs: all tất cả , color
+      • transition-timing-function: ease: khởi dầu chậm kết thúc chậm, ease-in: vào chậm ra nhanh, ease-out: vào nhanh ra chậm  */
+      .btn:hover::after {
+        width: 100%;
+      }
+
+      /* animation */
+      .box {
+        width: 50px;
+        height: 50px;
+        background: red;
+      }
     </style>
   </head>
 
@@ -118,7 +171,12 @@
     <!--  anh chị em chung ~ -->
     <!-- ------------------------------------------------------------------- -->
 
+    <!-- /* pseduo class */ -->
     <button class="btn">Button</button>
     <input type="text" class="input" />
+
+    <!-- /* pseduo class */ -->
+
+    <div class="box">Box</div>
   </body>
 </html>
